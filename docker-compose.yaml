@@ -1,0 +1,23 @@
+
+services:
+  demo-platform:
+    image: demo-platform:latest
+    ports:
+      - 8080:8080
+    networks:
+      - platform
+
+  dummyservice1:
+    image: dummynginx1:latest
+    networks:
+      - platform
+
+  dummyservice2:
+    image: dummynginx2:latest
+    networks:
+      - platform
+
+networks:
+  platform:
+
+
